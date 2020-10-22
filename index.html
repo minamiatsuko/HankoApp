@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" />
+
+
+    <script src="file1.js"></script>
+    <script src="file2.js"></script>
+</head>
+<body>
+    <div>
+      <div id="title">
+        {{ message }}
+      </div>
+      
+        <div>
+            <!--印鑑証明書の表示 ：object.js , cmanObjMove_v091.js-->
+            <div class="upload" >
+                <input type="file" name="upload_file" id="files" >
+                <object data="{path_to_file}" id="objects" width="500px" height="500px" cmanOMat="move"></object>
+            </div>
+           
+        </div>      
+
+        
+
+         
+<br>
+<br>
+<hr>
+<br>
+<br>
+
+        <div>
+            <!--PDFファイル、jpg、pndファイル表示： preview02.js , cmanObjMove_v091.js-->
+            <input type="file" name="file" id="myPdf02" accept=".png, .jpg, .jpeg, .pdf, .doc" capture="camera">
+            <img src="" alt="" id="preview02" cmanOMat="move"></img>
+            <canvas id="pdfViewer02" cmanOMat="move"></canvas>
+        </div>      
+          
+        <!-- <input type="range"  max="360"  id="ranger" onchange="rotate5(50);">
+        <input type="range"  max="360"  id="ranger" onchange="rotate5(-50);"> -->
+
+        
+
+          <div>
+            <input type="button" value="右回転" onclick="rotate2(0.5);">
+            <input type="button" value="左回転" onclick="rotate2(-0.5);">
+            <input type="button" value="拡大" onclick="scale2(0.01);">
+            <input type="button" value="縮小" onclick="scale2(-0.01);">
+<br>
+            <input type="range"  max="100"  onchange="rotate2(30);">
+            <input type="range"  max="100"  onchange="rotate2(-30);"> 
+            <input type="range"  min="1" max="10" step="0.1" onchange="scale2(0.07);">
+            <input type="range"  max="10" step="0.1" onchange="scale2(-0.07);"> 
+            
+          </div>
+
+          <div>
+            <input type="button" value="右回転" onclick="rotate4(0.5);">
+            <input type="button" value="左回転" onclick="rotate4(-0.5);">
+            <input type="button" value="拡大" onclick="scale4(0.01);">
+            <input type="button" value="縮小" onclick="scale4(-0.01);">
+<br>
+            <input type="range"  max="100"  onchange="rotate4(10);">
+            <input type="range"  max="100"  onchange="rotate4(-10);"> 
+            <input type="range"  min="-100" max="100" step="0.5" value="0" onchange="scale4(0.5);">
+            <input type="range"  max="10" step="0.5" value="0" onchange="scale4(-0.5);"> 
+          </div>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="rotate&scale.js"  type="text/javascript"></script>
+    <script src="cmanObjMove_v091.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <script src="preview01.js"  type="text/javascript"></script>
+    <script src="preview02.js"  type="text/javascript"></script>
+    <script src="object.js" charset="utf-8"></script>
+
+
+    <script>
+      const app = new Vue( {
+                el: '#title',
+                data: {
+                message: "印鑑アプリ"
+              }
+            } );
+
+    </script>
+
+    <script>
+        new Vue( {
+          el: '#pdfViewer02',
+          data: {
+             rotate: 0
+             scale: 1
+            }
+        } )
+    </script>
+</body>
+</html>

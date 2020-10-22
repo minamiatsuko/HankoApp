@@ -1,0 +1,73 @@
+canvas{
+    max-width:500px;
+    height:auto;
+    mix-blend-mode: hard-light;
+
+  }
+img{
+    max-width:350px;
+    height:auto;
+    /* mix-blend-mode: hard-light; */
+  }
+
+#preview02{
+  mix-blend-mode: darken;
+  /* darken,exclusion */
+}
+  #title{
+    text-align: center;
+    font-style: bold;
+    font-size: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  #pdfViewer01{
+    border: 4px solid;
+  }
+
+  #pdfViewer02{
+    mix-blend-mode: multiply;
+    border: 4px solid;
+    /* multiply,screen,overlay,darken,lighten,color-dodge,color-burn,hard-light,soft-light,exclusion,hue,saturation,color,luminosity */
+
+  }
+
+  /* スライダー */
+  input[type="range"] {
+    -webkit-appearance: none; /* 🚩これ無しだとスタイルがほぼ全く反映されないので注意 */
+    appearance: none;
+    cursor: pointer; /* カーソルを分かりやすく */
+    outline: none; /* スライダーのアウトラインは見た目がキツイので消す */
+    height: 5px; /* バーの高さ */
+    width: 50%; /* バーの幅 */
+    background: #8acdff; /* バーの背景色 */
+    border-radius: 5px; /* バーの両端の丸み */
+    border: solid 2px #dff1ff; /* バー周囲の線 */
+  }
+  /* WebKit向けのつまみ */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /*  🚩デフォルトのつまみのスタイルを解除 */
+    background: #53aeff; /* 背景色 */
+    width: 24px; /* 幅 */
+    height: 24px; /* 高さ */
+    border-radius: 50%; /* 円形に */
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15); /* 影 */
+  }
+  /* Moz向けのつまみ */
+  input[type="range"]::-moz-range-thumb {
+    background: #53aeff; /* 背景色 */
+    width: 24px; /* 幅 */
+    height: 24px; /* 高さ */
+    border-radius: 50%; /* 円形に */
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15); /* 影 */
+    border: none; /* デフォルトの線を消す */
+  }
+  /* Firefoxで点線が周りに表示されてしまう問題の解消 */
+  input[type="range"]::-moz-focus-outer {
+    border: 0;
+  }
+  /* つまみをドラッグしているときのスタイル */
+  input[type="range"]:active::-webkit-slider-thumb {
+    box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.3);
+  }
