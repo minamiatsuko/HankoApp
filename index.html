@@ -55,8 +55,7 @@
             <input type="range"  max="100"  onchange="rotate2(30);">
             <input type="range"  max="100"  onchange="rotate2(-30);"> 
             <input type="range"  min="1" max="10" step="0.1" onchange="scale2(0.07);">
-            <input type="range"  max="10" step="0.1" onchange="scale2(-0.07);"> 
-            
+            <input type="range"  max="10" step="0.1" onchange="scale2(-0.07);">
           </div>
 
           <div>
@@ -95,7 +94,7 @@
         new Vue( {
           el: '#pdfViewer02',
           data: {
-             rotate: 0
+             rotate: 0,
              scale: 1
             }
         } )
